@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>3D Studio - Immersive 3D Content & Photo Gallery</title>
+  <meta name="description" content="A modern website showcasing interactive 3D scenes and a beautiful photo gallery." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#home">3D Studio</a>
+      <nav class="nav">
+        <a href="#home">Home</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div id="webgl-container" aria-label="Interactive 3D scene" role="img"></div>
+      <div class="hero-content container">
+        <h1>Immersive 3D Experiences</h1>
+        <p>Explore interactive 3D graphics and a curated gallery of photos.</p>
+        <div class="hero-actions">
+          <a href="#gallery" class="button primary">View Gallery</a>
+          <a href="#about" class="button">Learn More</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="gallery container">
+      <h2>Photo Gallery</h2>
+      <div class="grid">
+        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=60" alt="Mountains at sunrise" loading="lazy"/>
+        <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1200&q=60" alt="Forest with fog" loading="lazy"/>
+        <img src="https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?auto=format&fit=crop&w=1200&q=60" alt="Skyline city lights" loading="lazy"/>
+        <img src="https://images.unsplash.com/photo-1482192596544-9eb780fc7f66?auto=format&fit=crop&w=1200&q=60" alt="Desert dunes" loading="lazy"/>
+        <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1200&q=60" alt="Ocean wave" loading="lazy"/>
+        <img src="https://images.unsplash.com/photo-1470770903676-69b98201ea1c?auto=format&fit=crop&w=1200&q=60" alt="Starry night sky" loading="lazy"/>
+        <img src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=1200&q=60" alt="Aurora over mountains" loading="lazy"/>
+        <img src="https://images.unsplash.com/photo-1493244040629-496f6d136cc3?auto=format&fit=crop&w=1200&q=60" alt="Lake and mountains" loading="lazy"/>
+        <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1200&q=60" alt="Milky Way" loading="lazy"/>
+        <img src="https://images.unsplash.com/photo-1476610182048-b716b8518aae?auto=format&fit=crop&w=1200&q=60" alt="Beach sunset" loading="lazy"/>
+        <img src="https://images.unsplash.com/photo-1520975916090-3105956dac38?auto=format&fit=crop&w=1200&q=60" alt="City architecture" loading="lazy"/>
+        <img src="https://images.unsplash.com/photo-1443890923422-7819ed4101c0?auto=format&fit=crop&w=1200&q=60" alt="Abstract shapes" loading="lazy"/>
+      </div>
+    </section>
+
+    <section id="about" class="about container">
+      <div class="about-content">
+        <h2>About</h2>
+        <p>This site demonstrates a lightweight Three.js scene integrated into a modern, responsive layout, alongside a fast-loading image gallery. Use your mouse (or touch) to orbit the 3D object.</p>
+      </div>
+    </section>
+
+    <section id="contact" class="contact container">
+      <h2>Contact</h2>
+      <form class="contact-form" action="#" method="post" onsubmit="event.preventDefault(); alert('Thanks! This demo has no backend.');">
+        <div class="form-row">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" placeholder="Jane Doe" required>
+        </div>
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="jane@example.com" required>
+        </div>
+        <div class="form-row">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" placeholder="Tell us about your project..." required></textarea>
+        </div>
+        <button class="button primary" type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> 3D Studio. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
